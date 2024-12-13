@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
 }
 h1 {
   margin: 0;
@@ -153,6 +153,23 @@ a {
 .form-input__content::after {
   border: 0;
 }
+
+/* Cars */
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-image {
+  width: 250px;
+}
+
 
 /* FAQ */
 .faq {
