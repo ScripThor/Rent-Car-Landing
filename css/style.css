@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  font-family: Montserrat;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.btn-green {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.ct-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.header {
+  border-bottom: 1px solid #bebebe;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header-social__icon {
+  width: 28px;
+}
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-navigation__menu ul {
+  list-style: none;
+  gap: 13px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.header-navigation__menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+.header-navigation__logo {
+  width: 28px;
+}
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+}
+.header-contacts__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+.header-contacts__callback {
+  font-size: 11px;
+  color: #ffffff;
+}
+.banner {
+  background-image: url(/img/slide-1.jpg);
+  height: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  justify-content: center;
+}
+
+.banner-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.banner-header__title {
+  color: #fff;
+}
+.banner-header__description {
+  color: #bebebe;
+}
+.banner-form {
+  border-radius: 7px;
+  background-color: #3889c4;
+  display: block;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 30px;
+}
+.banner-form__top {
+  display: flex;
+  gap: 10px;
+}
+.form-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  padding: 5px 10px;
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+  gap: 10px;
+}
+.form-input__icon img {
+  width: 25px;
+  vertical-align: middle;
+}
+.form-input__text {
+  display: flex;
+  flex-direction: column;
+}
+.form-input__label {
+  font-size: 10px;
+  color: grey;
+  text-align: left;
+}
+.form-input__content {
+  border: 0;
+}
+.form-input__content::after {
+  border: 0;
+}
+
+/* FAQ */
+.faq {
+  display: flex;
+}
+.faq-info {
+  width: 50%;
+}
+.faq-help {
+  background-color: #56b5f8d5;
+  border-radius: 10px;
+  padding: 5px 25px;
+  width: 400px;
+}
+.faq-help__title {
+  color: #000000;
+}
+.help-block {
+}
+.help-block__title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.help-block__info {
+  display: flex;
+  gap: 10px;
+  margin-top: 13px;
+}
+.help-block__info img {
+  width: 20px;
+}
+.help-block__description {
+  margin-bottom: 10px;
+}
+.help-block__tel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.help-block__tel a {
+  font-size: 18px;
+  font-weight: 500;
+}
+.help-block__tel span {
+  font-size: 12px;
+}
+.faq-block__title .opener {
+  display: inline-block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.faq-block__title .opener::after,
+.faq-block__title .opener::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.faq-block__title .opener::after {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
+}
