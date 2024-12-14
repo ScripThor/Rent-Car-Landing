@@ -1,7 +1,7 @@
 const cars = [
     {
         model: 'Datsun On-Do AT',
-        price: 'от 1 730 руб/cутки',
+        price: 'от 1 730 руб',
         carClass: 'Эконом',
         image: '/img/cars/datsun.jpg',
         seats_number: 5,
@@ -15,7 +15,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 2 730 руб/cутки',
+        price: 'от 2 730 руб',
     },
     {
         model: 'Haval Jolion',
@@ -24,7 +24,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 2 940 руб/cутки',
+        price: 'от 2 940 руб',
     },
     {
         model: 'Belgee X50',
@@ -33,7 +33,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 010 руб/cутки',
+        price: 'от 3 010 руб',
     },
     {
         model: 'Gac GS3',
@@ -42,7 +42,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 120 руб/cутки',
+        price: 'от 3 120 руб',
     },
     {
         model: 'Haval H3',
@@ -51,7 +51,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 440 руб/cутки',
+        price: 'от 3 440 руб',
     },
     {
         model: 'Haval Dargo 4WD',
@@ -60,7 +60,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 660 руб/cутки',
+        price: 'от 3 660 руб',
     },
     {
         model: 'Geely Atlas New 4 WD',
@@ -69,7 +69,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 970 руб/cутки',
+        price: 'от 3 970 руб',
     },
     {
         model: 'Nissan X-Trail 2.5',
@@ -78,7 +78,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 4 160 руб/cутки',
+        price: 'от 4 160 руб',
     },
     {
         model: 'Toyota Camry AT XV70',
@@ -87,7 +87,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 4 600 руб/cутки',
+        price: 'от 4 600 руб',
     },
     {
         model: 'Geely Preface Flagship',
@@ -96,7 +96,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 4 350 руб/cутки',
+        price: 'от 4 350 руб',
     },
 ];
 
@@ -119,32 +119,35 @@ function displayCars() {
         // Создание заголовка модели машины
         const carModel = document.createElement('span');
         carModel.textContent = car.model;
+        carModel.classList.add('car-name');
 
         const carClass = document.createElement('span');
         carClass.textContent = `${car.carClass}`;
+        carClass.classList.add('car-class');
 
         // Создание описания машины (список)
         const carInfo = document.createElement('ul');
+        carInfo.classList.add('car-info');
 
         // Создаем каждый пункт списка (li) и добавляем в carInfo
         const seatsItem = document.createElement('li');
-        seatsItem.textContent = `Мест: ${car.seats_number}`;
+        seatsItem.textContent = `${car.seats_number}`;
         seatsItem.classList.add('seats_number');
         carInfo.appendChild(seatsItem);
 
         const doorsItem = document.createElement('li');
-        doorsItem.textContent = `Дверей: ${car.doors_number}`;
+        doorsItem.textContent = `${car.doors_number}`;
         doorsItem.classList.add('doors_number');
         carInfo.appendChild(doorsItem);
 
         const transmissionItem = document.createElement('li');
-        transmissionItem.textContent = `Трансмиссия: ${car.transmission}`;
+        transmissionItem.textContent = `${car.transmission}`;
         transmissionItem.classList.add('transmission');
         carInfo.appendChild(transmissionItem);
 
         // Создание цены
         const carPrice = document.createElement('p');
-        carPrice.textContent = car.price;
+        carPrice.textContent = `${car.price}/cутки`;
 
         // Добавляем все элементы в карточку
         carDiv.appendChild(carModel);

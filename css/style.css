@@ -2,6 +2,12 @@ body {
   margin: 0;
   font-family: Montserrat, serif;
 }
+
+main {
+  margin: 0 auto;
+  max-width: 1366px;
+}
+
 h1 {
   margin: 0;
 }
@@ -159,17 +165,58 @@ a {
 .car-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .car-card {
   display: flex;
   flex-direction: column;
+  background-color: #f5f6fa;
+  border-radius: 16px;
+  justify-content: space-between;
+  min-height: 241px;
+  outline: none;
+  padding: 24px 35px;
+  text-align: left;
 }
 
 .car-image {
   width: 250px;
 }
 
+.car-name {
+  color: #0d0c24;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 8px;
+}
+
+.car-class {
+  color: #3889c4;
+}
+
+.car-info {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.seats_number:before, .doors_number:before, .transmission:before {
+  width: 1em;
+  position: absolute;
+}
+
+.seats_number:before {
+  content: url(/img/icons/ico-user.svg);
+}
+
+.doors_number:before {
+  content: url(/img/icons/ico-door.svg);
+}
+
+.transmission:before {
+  content: url(/img/icons/ico-tr.svg);
+}
 
 /* FAQ */
 .faq {
