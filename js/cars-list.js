@@ -102,17 +102,13 @@ const cars = [
 
 function displayCars(filteredClass = null) {
     const carList = document.getElementById('carList');
-    const carD = document.getElementsByClassName('car-item');
+
     carList.innerHTML = '';
 
     cars.forEach(car => {
         // Создание карточки для каждой машины
         const carDiv = document.createElement('div');
         carDiv.classList.add('car-card')
-
-        if (filteredClass === true) {
-            carD.classList.add('car-card--active')
-        }
 
         if (filteredClass && car.carClass !== filteredClass) {
             carDiv.classList.add('disabled'); // Добавляем класс disabled
@@ -181,16 +177,23 @@ function displayCars(filteredClass = null) {
     })
 }
 
+
 // Функция для фильтрации по категориям
 function filterByClass(category) {
-    displayCars(category); // Обновляем список автомобилей с фильтром
+    if (category !== '') {
+        displayCars(category);
+    } else {
+        displayCars('')
+    }
 }
 
 // Добавляем обработчики клика для каждой категории
 const sedans = document.getElementById('sedans');
 const universals = document.getElementById('universals');
 const offroads = document.getElementById('offroads');
+const all = document.getElementById('all');
 
+all.addEventListener('click', () => filterByClass(''));
 sedans.addEventListener('click', () => filterByClass('Седан'));
 universals.addEventListener('click', () => filterByClass('Универсал'));
 offroads.addEventListener('click', () => filterByClass('Кроссовер'));
