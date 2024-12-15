@@ -12,6 +12,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 a {
   text-decoration: none;
 }
@@ -191,6 +195,11 @@ button {
   cursor: pointer;
 }
 
+.cars-item--active {
+  background-color: #3889c4;
+  color: #fff
+}
+
 .car-list {
   display: flex;
   flex-wrap: wrap;
@@ -282,6 +291,12 @@ button {
 
 .transmission:before {
   content: url(/img/icons/ico-tr.svg);
+}
+
+.disabled {
+  display: none;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 /* FAQ */
