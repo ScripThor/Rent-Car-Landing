@@ -20,7 +20,3 @@ function updateDateEnd() {
 
 dateStart.addEventListener('input', updateDateEnd);
 dateEnd.addEventListener('input', updateDateEnd);
-
-
-
-

@@ -11,9 +11,22 @@ main {
 h1 {
   margin: 0;
 }
+
 a {
   text-decoration: none;
 }
+
+ul, li {
+  all: unset;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
+
+
 .btn-green {
   background-color: #04aa6d; /* Green */
   border: none;
@@ -161,19 +174,36 @@ a {
 }
 
 /* Cars */
+.cars-category {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cars-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e7e9f0;
+  border-radius: 15px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
 
 .car-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
 }
 
 .car-card {
   display: flex;
+  width: 330px;
   flex-direction: column;
   background-color: #f5f6fa;
   border-radius: 16px;
-  justify-content: space-between;
   min-height: 241px;
   outline: none;
   padding: 24px 35px;
@@ -182,13 +212,14 @@ a {
 
 .car-image {
   width: 250px;
+  margin: 10px auto;
 }
 
 .car-name {
   color: #0d0c24;
   font-size: 18px;
   line-height: 21px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .car-class {
@@ -198,11 +229,46 @@ a {
 .car-info {
   display: flex;
   list-style: none;
-  gap: 10px;
+  gap: 20px;
+  border-top: 1px solid #bebebe;
+  padding-top: 15px;
+  margin-top: 10px;
+  padding-bottom: 15px;
+  justify-content: center;
+}
+
+.car-info li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.car-price {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-button {
+  background-color: #3889c4;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.price-button:hover {
+  background-color: #2171ab;
 }
 
 .seats_number:before, .doors_number:before, .transmission:before {
   width: 1em;
+  left: 0;
   position: absolute;
 }
 
