@@ -1,102 +1,102 @@
 const cars = [
     {
-        model: 'Datsun On-Do AT',
+        model: 'Hyundai Solaris II R',
         price: 'от 1 730 руб',
-        carClass: 'Эконом',
-        image: '/img/cars/datsun.jpg',
+        carClass: 'Седан',
+        image: '/img/cars/solaris.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
     },
     {
-        model: 'Geely Emgrand',
-        carClass: 'Стандарт',
-        image: '/img/cars/emgrand.jpg',
+        model: 'Volkswagen Polo VI',
+        carClass: 'Седан',
+        image: '/img/cars/polo.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
         price: 'от 2 730 руб',
     },
     {
-        model: 'Haval Jolion',
+        model: 'Geely Okavango',
         carClass: 'Кроссовер',
-        image: '/img/cars/jolion.jpg',
+        image: '/img/cars/okavango.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 2 940 руб',
+        price: 'от 2 970 руб',
     },
     {
-        model: 'Belgee X50',
+        model: 'Renault Duster',
         carClass: 'Кроссовер',
-        image: '/img/cars/x50.jpg',
+        image: '/img/cars/duster.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 010 руб',
+        price: 'от 2 970 руб',
     },
     {
-        model: 'Gac GS3',
+        model: 'Lada Largus 7 мест MT',
+        carClass: 'Универсал',
+        image: '/img/cars/largus.webp',
+        seats_number: 7,
+        doors_number: 4,
+        transmission: 'МT',
+        price: 'от 2 120 руб',
+    },
+    {
+        model: 'Renault Kaptur',
         carClass: 'Кроссовер',
-        image: '/img/cars/gs3.jpg',
+        image: '/img/cars/kaptur.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 120 руб',
+        price: 'от 3 270 руб',
     },
     {
-        model: 'Haval H3',
-        carClass: 'Кроссовер',
-        image: '/img/cars/h3.jpg',
+        model: 'Geely Emgrand',
+        carClass: 'Седан',
+        image: '/img/cars/emgrand.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 3 440 руб',
+        price: 'от 2 960 руб',
     },
     {
-        model: 'Haval Dargo 4WD',
-        carClass: 'Кроссовер',
-        image: '/img/cars/dargo.jpg',
-        seats_number: 5,
-        doors_number: 4,
-        transmission: 'AT',
-        price: 'от 3 660 руб',
-    },
-    {
-        model: 'Geely Atlas New 4 WD',
-        carClass: 'Кроссовер',
-        image: '/img/cars/atlas.jpg',
+        model: 'Hyundai Sonata',
+        carClass: 'Седан',
+        image: '/img/cars/sonata.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
         price: 'от 3 970 руб',
     },
     {
-        model: 'Nissan X-Trail 2.5',
-        carClass: 'Кроссовер',
-        image: '/img/cars/xtrail.jpg',
+        model: 'BMW 320D (G20)',
+        carClass: 'Седан',
+        image: '/img/cars/320.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
         price: 'от 4 160 руб',
     },
     {
-        model: 'Toyota Camry AT XV70',
+        model: 'BMW 520D (G30)',
         carClass: 'Бизнес',
-        image: '/img/cars/camry.jpg',
+        image: '/img/cars/520.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 4 600 руб',
+        price: 'от 6 600 руб',
     },
     {
-        model: 'Geely Preface Flagship',
-        carClass: 'Бизнес',
-        image: '/img/cars/preface.jpg',
+        model: 'Mercedes-Benz GLE Coupe',
+        carClass: 'Премиум',
+        image: '/img/cars/gle.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
-        price: 'от 4 350 руб',
+        price: 'от 10 350 руб',
     },
 ];
 
@@ -145,16 +145,28 @@ function displayCars() {
         transmissionItem.classList.add('transmission');
         carInfo.appendChild(transmissionItem);
 
+        const priceBlock = document.createElement('div');
+        priceBlock.classList.add('price-block');
+
         // Создание цены
-        const carPrice = document.createElement('p');
+        const carPrice = document.createElement('span');
         carPrice.textContent = `${car.price}/cутки`;
+        carPrice.classList.add('car-price');
+
+        const priceButton = document.createElement('button');
+        priceButton.textContent = `Забронировать`
+        priceButton.classList.add('price-button');
+
+
 
         // Добавляем все элементы в карточку
         carDiv.appendChild(carModel);
         carDiv.appendChild(carClass);
         carDiv.appendChild(carImage);
         carDiv.appendChild(carInfo);
-        carDiv.appendChild(carPrice);
+        carDiv.appendChild(priceBlock);
+        priceBlock.appendChild(priceButton);
+        priceBlock.appendChild(carPrice);
 
         // Добавляем карточку в контейнер
         carList.appendChild(carDiv);
