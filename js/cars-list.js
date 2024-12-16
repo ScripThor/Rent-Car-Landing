@@ -160,8 +160,7 @@ function displayCars(filteredClass = null) {
         const priceButton = document.createElement('button');
         priceButton.textContent = `Забронировать`
         priceButton.classList.add('price-button');
-
-
+        priceButton.setAttribute('id', 'show-modal-btn');
 
         // Добавляем все элементы в карточку
         carDiv.appendChild(carModel);
@@ -177,26 +176,28 @@ function displayCars(filteredClass = null) {
     })
 }
 
-
 // Функция для фильтрации по категориям
 function filterByClass(category) {
-    if (category !== '') {
-        displayCars(category);
-    } else {
-        displayCars('')
-    }
+    displayCars(category || '');
 }
 
-// Добавляем обработчики клика для каждой категории
-const sedans = document.getElementById('sedans');
-const universals = document.getElementById('universals');
-const offroads = document.getElementById('offroads');
-const all = document.getElementById('all');
+// Получаем все кнопки и обрабатываем их
+const categoryButtons = document.querySelectorAll('#sedans, #universals, #offroads, #all');
 
-all.addEventListener('click', () => filterByClass(''));
-sedans.addEventListener('click', () => filterByClass('Седан'));
-universals.addEventListener('click', () => filterByClass('Универсал'));
-offroads.addEventListener('click', () => filterByClass('Кроссовер'));
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Убираем 'active' у всех кнопок
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Добавляем 'active' текущей кнопке
+        const parentDiv = button.tagName === 'DIV' ? button : null;
+        if (parentDiv) parentDiv.classList.add('active');
+
+        // Передаем категорию в filterByClass
+        const category = button.dataset.category || ''; // Используем data-атрибуты для категорий
+        filterByClass(category);
+    });
+});
 
 displayCars();
 

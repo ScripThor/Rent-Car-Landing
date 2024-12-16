@@ -193,9 +193,10 @@ button {
   border-radius: 15px;
   padding: 5px 20px;
   cursor: pointer;
+  user-select: none;
 }
 
-.cars-item--active {
+.active {
   background-color: #3889c4;
   color: #fff
 }
