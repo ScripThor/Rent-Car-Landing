@@ -448,9 +448,27 @@ input, textarea {
 
 
 .feedback-info {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease-in-out, visibility 0s 0s;
+  position: fixed;
+  bottom: -50px; /* Начальная позиция ниже экрана */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2171ab;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0; /* Прозрачное */
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+
+.feedback-info.visible {
+  bottom: 50px; /* Положение сообщения над экраном */
+  opacity: 1; /* Плавное появление */
+}
+
+.feedback-info.hidden {
+  opacity: 0;
 }
 
 .hidden {

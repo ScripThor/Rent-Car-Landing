@@ -1,10 +1,9 @@
 const modal = document.getElementsByClassName('modal')[0]
-// Открытие модального окна с добавлением класса "show"
+
 const openModal = () => {
     modal.classList.add('show');
 };
 
-// Закрытие модального окна с удалением класса "show"
 const closeModal = () => {
     modal.classList.remove('show');
 };
@@ -12,14 +11,27 @@ const closeModal = () => {
 const formWindow = document.getElementById('feedbackForm');
 let success = document.getElementById('feedbackInfo');
 
-
 formWindow.addEventListener('submit', function(event) {
     event.preventDefault();
 
     let name = document.getElementById('name').value;
-    let tel = document.getElementById('tel').value;
-    success.classList.toggle('hidden')
-    success.textContent = `Спасибо, ${name}! Скоро с вами свяжется менеджер`
 
     this.reset();
+
+    closeModal()
+
+    showFeedbackInfo()
+
+    function showFeedbackInfo() {
+        success.textContent = `Спасибо, ${name}! Скоро с вами свяжется менеджер`
+        success.classList.toggle('hidden')
+        success.classList.remove('hidden');
+        success.classList.add('visible');
+
+        setTimeout(() => {
+            success.classList.remove('visible');
+            success.classList.add('hidden');
+        }, 5000);
+    }
 });
+
