@@ -160,7 +160,7 @@ function displayCars(filteredClass = null) {
         const priceButton = document.createElement('button');
         priceButton.textContent = `Забронировать`
         priceButton.classList.add('price-button');
-        priceButton.setAttribute('id', 'show-modal-btn');
+        priceButton.setAttribute('onclick', 'openModal()');
 
         // Добавляем все элементы в карточку
         carDiv.appendChild(carModel);
@@ -174,6 +174,7 @@ function displayCars(filteredClass = null) {
         // Добавляем карточку в контейнер
         carList.appendChild(carDiv);
     })
+
 }
 
 // Функция для фильтрации по категориям

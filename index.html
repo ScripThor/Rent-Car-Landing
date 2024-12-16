@@ -199,16 +199,70 @@
               </div>
             </div>
             <div id="carList" class="car-list"></div>
-            <div id="modal" class="reserv">
-              <dialog style="padding: 0">
-                <div id="modal-box" style="padding: 1rem">
-                  <div>Modal content</div>
-                  <button id="close-modal-btn">Close</button>
-                </div>
-              </dialog>
-              <button id="show-modal-btn">Show modal</button>
+            <div class="modal">
+              <div class="modal-content">
+                <form id="feedbackForm">
+                  <label for="name">Имя:</label>
+                  <input type="text" id="name" name="name" required>
+
+                  <label for="tel">Телефон:</label>
+                  <input type="tel" id="tel" name="tel" required>
+
+                  <label>Комментарий:</label>
+                  <textarea name="message" required></textarea>
+
+                  <button type="submit">Отправить</button>
+                  <div id="feedbackInfo" class="feedback-info hidden"></div>
+                </form>
+
+                <span onclick="closeModal();" class="modal-close">&times</span>
+              </div>
             </div>
+            <button class="modal-button__open" id="modal-open-btn" style="padding: 10px 15px; background-color: #2171ab; cursor: pointer" onclick="openModal()">Show modal</button>
           </div>
+
+          <!-- Простой попап диалог с формой -->
+          <dialog id="favDialog">
+            <form method="dialog">
+              <section>
+                <p>
+                  <label for="favAnimal">Favorite animal:</label>
+                  <select id="favAnimal">
+                    <option></option>
+                    <option>Brine shrimp</option>
+                    <option>Red panda</option>
+                    <option>Spider monkey</option>
+                  </select>
+                </p>
+              </section>
+              <menu>
+                <button id="cancel" type="reset">Cancel</button>
+                <button type="submit">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+
+          <menu>
+            <button id="updateDetails">Update details</button>
+          </menu>
+
+          <script>
+            (function () {
+              var updateButton = document.getElementById("updateDetails");
+              var cancelButton = document.getElementById("cancel");
+              var favDialog = document.getElementById("favDialog");
+
+              // Update button opens a modal dialog
+              updateButton.addEventListener("click", function () {
+                favDialog.showModal();
+              });
+
+              // Form cancel button closes the dialog box
+              cancelButton.addEventListener("click", function () {
+                favDialog.close();
+              });
+            })();
+          </script>
 
         </section>
         <section class="faq ct-container">
@@ -265,5 +319,6 @@
     </div>
     <script src="js/main.js"></script>
     <script src="js/cars-list.js"></script>
+    <script src="js/modal-window.js"></script>
   </body>
 </html>

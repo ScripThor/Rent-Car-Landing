@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Montserrat, serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -28,6 +29,36 @@ ul, li {
 
 button {
   all: unset;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form  button{
+  background-color: #3889c4;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin: 10px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, textarea {
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  border-radius: 5px;
 }
 
 
@@ -380,3 +411,51 @@ button {
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
   transform: translate(-50%, -50%) rotate(90deg);
 }
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0s;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 100px auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-close {
+  font-size: 30px;
+}
+
+
+.feedback-info {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0s;
+}
+
+.hidden {
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+  opacity: 0;
+}
+
