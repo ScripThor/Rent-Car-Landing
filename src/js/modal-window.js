@@ -9,7 +9,7 @@ const closeModal = () => {
 };
 
 const formWindow = document.getElementById('feedbackForm');
-let success = document.getElementById('feedbackInfo');
+const success = document.getElementById('feedbackInfo');
 
 formWindow.addEventListener('submit', function(event) {
     event.preventDefault();
