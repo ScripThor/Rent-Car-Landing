@@ -135,7 +135,7 @@ input, textarea {
   color: #ffffff;
 }
 .banner {
-  background-image: url(/img/slide-1.jpg);
+  background-image: url(/assets/img/slide-1.jpg);
   height: 100%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -314,15 +314,15 @@ input, textarea {
 }
 
 .seats_number:before {
-  content: url(/img/icons/ico-user.svg);
+  content: url(/assets/img/icons/ico-user.svg);
 }
 
 .doors_number:before {
-  content: url(/img/icons/ico-door.svg);
+  content: url(/assets/img/icons/ico-door.svg);
 }
 
 .transmission:before {
-  content: url(/img/icons/ico-tr.svg);
+  content: url(/assets/img/icons/ico-tr.svg);
 }
 
 .disabled {

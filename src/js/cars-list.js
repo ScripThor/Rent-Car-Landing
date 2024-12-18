@@ -3,7 +3,7 @@ const cars = [
         model: 'Hyundai Solaris II R',
         price: 'от 1 730 руб',
         carClass: 'Седан',
-        image: '/img/cars/solaris.webp',
+        image: '/assets/img/cars/solaris.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -11,7 +11,7 @@ const cars = [
     {
         model: 'Volkswagen Polo VI',
         carClass: 'Седан',
-        image: '/img/cars/polo.webp',
+        image: '/assets/img/cars/polo.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -20,7 +20,7 @@ const cars = [
     {
         model: 'Geely Okavango',
         carClass: 'Кроссовер',
-        image: '/img/cars/okavango.webp',
+        image: '/assets/img/cars/okavango.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -29,7 +29,7 @@ const cars = [
     {
         model: 'Renault Duster',
         carClass: 'Кроссовер',
-        image: '/img/cars/duster.webp',
+        image: '/assets/img/cars/duster.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -38,7 +38,7 @@ const cars = [
     {
         model: 'Lada Largus 7 мест MT',
         carClass: 'Универсал',
-        image: '/img/cars/largus.webp',
+        image: '/assets/img/cars/largus.webp',
         seats_number: 7,
         doors_number: 4,
         transmission: 'МT',
@@ -47,7 +47,7 @@ const cars = [
     {
         model: 'Renault Kaptur',
         carClass: 'Кроссовер',
-        image: '/img/cars/kaptur.webp',
+        image: '/assets/img/cars/kaptur.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -56,7 +56,7 @@ const cars = [
     {
         model: 'Geely Emgrand',
         carClass: 'Седан',
-        image: '/img/cars/emgrand.webp',
+        image: '/assets/img/cars/emgrand.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -65,7 +65,7 @@ const cars = [
     {
         model: 'Hyundai Sonata',
         carClass: 'Седан',
-        image: '/img/cars/sonata.webp',
+        image: '/assets/img/cars/sonata.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -74,7 +74,7 @@ const cars = [
     {
         model: 'BMW 320D (G20)',
         carClass: 'Седан',
-        image: '/img/cars/320.webp',
+        image: '/assets/img/cars/320.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -83,7 +83,7 @@ const cars = [
     {
         model: 'BMW 520D (G30)',
         carClass: 'Бизнес',
-        image: '/img/cars/520.webp',
+        image: '/assets/img/cars/520.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
@@ -92,7 +92,7 @@ const cars = [
     {
         model: 'Mercedes-Benz GLE Coupe',
         carClass: 'Премиум',
-        image: '/img/cars/gle.webp',
+        image: '/assets/img/cars/gle.webp',
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
