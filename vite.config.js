@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    root: './', // Указывает на корень проекта
-    publicDir: 'public', // Папка с публичными файлами
+    root: './',
+    publicDir: 'public',
     server: {
-        port: 3000, // Задание порта
-        open: true, // Открытие браузера при запуске
+        port: 3000,
+        open: true,
     },
     build: {
-        outDir: 'dist', // Папка для сборки
+        outDir: 'dist',
     },
 });
