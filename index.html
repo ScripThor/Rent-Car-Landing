@@ -44,7 +44,7 @@
               </nav>
             </div>
             <div class="header-navigation__center">
-              <a href="/public"
+              <a href="/"
               ><img
                       class="header-navigation__logo"
                       src="/assets/img/logo.png"
@@ -202,19 +202,60 @@
         <div class="modal">
           <div class="modal-content">
             <form id="feedbackForm">
-              <label for="name">Имя:</label>
-              <input type="text" id="name" name="name" required>
-              <label for="tel">Телефон:</label>
-              <input type="tel" id="tel" name="tel" required>
-              <label>Комментарий:</label>
+              <label class="modal-label" for="name">Имя:</label>
+              <input class="modal-input" type="text" id="name" name="name" required>
+              <label class="modal-label" for="tel">Телефон:</label>
+              <input class="modal-input" type="tel" id="tel" name="tel" required>
+              <label class="modal-label">Комментарий:</label>
               <textarea name="message" required></textarea>
               <button type="submit">Отправить</button>
             </form>
-<!--            <span onclick="closeModal();" class="modal-close">&times</span>-->
+            <span onclick="closeModal();" class="modal-close">&times;</span>
           </div>
         </div>
         <div id="feedbackInfo" class="feedback-info hidden"></div>
-        <button class="modal-button__open" id="modal-open-btn" style="padding: 10px 15px; background-color: #2171ab; cursor: pointer" onclick="openModal()">Show modal</button>
+      </div>
+    </section>
+    <section class="conditions ct-container">
+      <h2 class="title">Условия аренды</h2>
+      <p class="description">Арендуя автомобиль в «N-прокат», Вы должны следовать правилам компании:</p>
+      <div class="conditions-list">
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition1.svg">
+          <span class="conditions-list__item-description">Водительский стаж арендатора от 2-х лет</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition2.svg">
+          <span class="conditions-list__item-description">Наличие и регион регистрации значения не имеют</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition3.svg">
+          <span class="conditions-list__item-description">Минимальный срок аренды автомобиля - 24 часа</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition4.svg">
+          <span class="conditions-list__item-description">Автомобиль в прокат выдается чистым, при сдаче грязного автомобиля оплачивается мойка - 1000 руб.</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition5.svg">
+          <span class="conditions-list__item-description">Уровень топлива при сдаче автомобиля должен быть не меньше, чем при выдаче</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition6.svg">
+          <span class="conditions-list__item-description">Территории использования: расстояние не превышающее 1000 км от места выдачи, без выезда за пределы РФ</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition7.svg">
+          <span class="conditions-list__item-description">Cдача и выдача авто для аренды ежедневно с 9 до 19 часов. Сдача/выдача в нерабочее время + 800 руб.</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition8.svg">
+          <span class="conditions-list__item-description">Стоимость доставки от 800 до 3000 руб.</span>
+        </div>
+        <div class="conditions-list__item">
+          <img class="conditions-list__item-icon" src="/assets/img/icons/condition9.svg">
+          <span class="conditions-list__item-description">Никаких скрытых условий и звездочек, без залога и лимита пробега</span>
+        </div>
       </div>
     </section>
     <section class="faq ct-container">
@@ -270,8 +311,8 @@
   <footer></footer>
 </div>
 <script type="module" src="src/js/main.js"></script>
-<script type="module" src="src/js/modal-window.js"></script>
-<script type="module" src="src/js/cars-list.js"></script>
+<script src="src/js/modal-window.js"></script>
+<script src="src/js/cars-list.js"></script>
 
 </body>
 </html>

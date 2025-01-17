@@ -38,7 +38,7 @@ form {
   margin: 0 auto;
 }
 
-form  button{
+form  button {
   background-color: #3889c4;
   color: #ffffff;
   text-align: center;
@@ -61,7 +61,6 @@ input, textarea {
   border-radius: 5px;
 }
 
-
 .btn-green {
   background-color: #04aa6d; /* Green */
   border: none;
@@ -79,7 +78,20 @@ input, textarea {
 .ct-container {
   max-width: 1250px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
+
+.title {
+  text-align: center;
+  font-size: 35px;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 20px;
+}
+
 .header {
   border-bottom: 1px solid #bebebe;
 }
@@ -331,6 +343,32 @@ input, textarea {
   pointer-events: none;
 }
 
+/* Conditions */
+
+.conditions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.conditions-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  gap: 15px;
+}
+
+.conditions-list__item-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.conditions-list__item-description {
+  text-align: center;
+}
+
 /* FAQ */
 .faq {
   display: flex;
@@ -444,12 +482,13 @@ input, textarea {
 
 .modal-close {
   font-size: 30px;
+  cursor: pointer;
 }
 
 
 .feedback-info {
   position: fixed;
-  bottom: -50px; /* Начальная позиция ниже экрана */
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #2171ab;
@@ -457,7 +496,7 @@ input, textarea {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
-  opacity: 0; /* Прозрачное */
+  opacity: 0;
   transition: all 1s ease-in-out;
   z-index: 2;
 }
@@ -473,7 +512,7 @@ input, textarea {
 
 .hidden {
   visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+  transition: opacity 0.7s ease-in-out, visibility 0s 0.7s;
   opacity: 0;
 }
 
