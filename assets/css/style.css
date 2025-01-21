@@ -177,19 +177,20 @@ input, textarea {
 .banner-form {
   border-radius: 7px;
   background-color: #3889c4;
-  display: block;
   height: 100px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   padding: 5px 30px;
 }
+
 .banner-form__top {
   display: flex;
   gap: 10px;
 }
+
 .form-input {
   display: flex;
   flex-direction: row;

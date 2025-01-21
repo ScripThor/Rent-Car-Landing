@@ -130,7 +130,7 @@
                 />
               </div>
             </div>
-            <button class="btn-green">Поиск</button>
+            <button class="btn-green" id="searchBtn">Поиск</button>
           </div>
           <div class="banner-form__bottom"></div>
         </div>
@@ -142,8 +142,9 @@
   </div>
   <main role="main">
     <section>
-      <h2>Наши автомобили</h2>
+      <h2 class="title">Наши автомобили</h2>
       <div class="cars">
+        <div id="availableCars"></div>
         <div class="cars-category">
           <div class="cars-item" id="all" data-category="">
             <span class="cars-item__name">Все</span>
@@ -258,6 +259,7 @@
         </div>
       </div>
     </section>
+
     <section class="faq ct-container">
       <div class="faq-info">
         <h2>Часто задаваемые вопросы</h2>
