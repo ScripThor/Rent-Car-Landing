@@ -532,6 +532,9 @@ input, textarea {
   cursor: pointer;
 }
 
+.feedbackForm-message {
+  font-size: 15px;
+}
 
 .feedback-info {
   position: fixed;

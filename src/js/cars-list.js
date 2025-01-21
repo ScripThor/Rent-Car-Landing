@@ -165,10 +165,10 @@ function displayCars(filteredClass = null) {
         const formTopMessage = document.getElementById('feedbackForm-message')
         priceButton.addEventListener('click', () => {
             if (!dateStart.value || !dateEnd.value) {
-                formTopMessage.textContent = `Уточните свободную дату у менеджера для бронирования ${car.model}`;
+                formTopMessage.innerHTML = `Уточните свободную дату у менеджера для бронирования <strong>${car.model}</strong> `;
                 return;
             }
-            formTopMessage.textContent = `Бронирование автомобиля ${car.model} с ${dateStart.value} по ${dateEnd.value}`;
+            formTopMessage.innerHTML = `Бронирование автомобиля <strong>${car.model}</strong> с <strong>${dateStart.value}</strong> по <strong>${dateEnd.value}</strong> `;
         })
 
         // Добавляем все элементы в карточку
