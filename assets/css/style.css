@@ -372,21 +372,67 @@ input, textarea {
 /* FAQ */
 .faq {
   display: flex;
+  justify-content: space-between;
 }
+
 .faq-info {
-  width: 50%;
+  width: 55%;
 }
+
+.faq-block {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 0 rgb(0,0,0,0.25);
+  margin: 20px 0;
+}
+
+.faq-block__question {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px 80px 20px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px 20px 0 0;
+}
+
+.faq-block__question::after {
+  content: "\002B";
+  font-size: 2.2rem;
+  position: absolute;
+  right: 20px;
+  transition: 0.2s;
+}
+
+.faq-block__question.active::after {
+  transform: rotate(45deg);
+}
+
+.faq-block__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq-block__answer p {
+  padding: 0 20px;
+  line-height: 1.5rem;
+}
+
 .faq-help {
   background-color: #56b5f8d5;
   border-radius: 10px;
   padding: 5px 25px;
-  width: 400px;
+  width: 35%;
 }
 .faq-help__title {
   color: #000000;
 }
 .help-block {
 }
+
 .help-block__title {
   font-weight: 600;
   font-size: 18px;
