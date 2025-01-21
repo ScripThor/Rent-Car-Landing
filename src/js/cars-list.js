@@ -162,6 +162,15 @@ function displayCars(filteredClass = null) {
         priceButton.classList.add('price-button');
         priceButton.setAttribute('onclick', 'openModal()');
 
+        const formTopMessage = document.getElementById('feedbackForm-message')
+        priceButton.addEventListener('click', () => {
+            if (!dateStart.value || !dateEnd.value) {
+                formTopMessage.textContent = `Уточните свободную дату у менеджера для бронирования ${car.model}`;
+                return;
+            }
+            formTopMessage.textContent = `Бронирование автомобиля ${car.model} с ${dateStart.value} по ${dateEnd.value}`;
+        })
+
         // Добавляем все элементы в карточку
         carDiv.appendChild(carModel);
         carDiv.appendChild(carClass);

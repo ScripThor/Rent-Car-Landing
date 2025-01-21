@@ -62,18 +62,10 @@ searchBtn.addEventListener('click', async () => {
         return;
     }
 
-    // Убираем предыдущее сообщение
     formBottomMessage.textContent = '';
-
-    // Запускаем анимацию "Поиск..."
     await showLoadingMessage();
-
-    // Обновляем доступные автомобили
     getAvailableCars();
-
     formBottomMessage.textContent = '';
-
-    // Прокручиваем к блоку с автомобилями
     smoothScrollTo(carsSection);
 });
 

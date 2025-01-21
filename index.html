@@ -144,7 +144,7 @@
     <section>
       <h2 class="title">Наши автомобили</h2>
       <div class="cars">
-        <div id="availableCars"></div>
+        <div class="description" id="availableCars">Пожалуйста, выберите даты начала и завершения аренды, чтобы увидеть доступные автомобили</div>
         <div class="cars-category">
           <div class="cars-item" id="all" data-category="">
             <span class="cars-item__name">Все</span>
@@ -203,6 +203,7 @@
         <div class="modal">
           <div class="modal-content">
             <form id="feedbackForm">
+              <div id="feedbackForm-message"></div>
               <label class="modal-label" for="name">Имя:</label>
               <input class="modal-input" type="text" id="name" name="name" required>
               <label class="modal-label" for="tel">Телефон:</label>
@@ -337,7 +338,7 @@
   </main>
   <footer></footer>
 </div>
-<script src="src/js/main.js"></script>
+<script type="module" src="src/js/main.js"></script>
 <script src="src/js/modal-window.js"></script>
 <script src="src/js/cars-list.js"></script>
 
