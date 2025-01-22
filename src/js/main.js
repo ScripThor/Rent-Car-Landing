@@ -20,6 +20,9 @@ function updateDateEnd() {
     if (dateEnd.value >= dateEnd.max) {
         dateEnd.value = dateEnd.max;
     }
+    if (new Date(dateStart.value) > new Date(dateEnd.value)) {
+        dateEnd.value = dateStart.value;
+    }
 }
 
 dateStart.addEventListener('input', updateDateEnd);
