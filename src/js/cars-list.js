@@ -111,7 +111,9 @@ const cars = [
     },
 ];
 
-function displayCars(filteredCars = cars) {
+let filteredCars = cars;
+
+function displayCars() {
     const carList = document.getElementById('carList');
     carList.innerHTML = '';
 
@@ -136,30 +138,24 @@ function displayCars(filteredCars = cars) {
         carClass.textContent = `${car.carClass}`;
         carClass.classList.add('car-class');
 
-        // Создание описания машины (список)
         const carInfo = document.createElement('ul');
         carInfo.classList.add('car-info');
 
-        // Создаем каждый пункт списка (li) и добавляем в carInfo
         const seatsItem = document.createElement('li');
         seatsItem.textContent = `${car.seats_number}`;
-        seatsItem.classList.add('seats_number');
         carInfo.appendChild(seatsItem);
 
         const doorsItem = document.createElement('li');
         doorsItem.textContent = `${car.doors_number}`;
-        doorsItem.classList.add('doors_number');
         carInfo.appendChild(doorsItem);
 
         const transmissionItem = document.createElement('li');
         transmissionItem.textContent = `${car.transmission}`;
-        transmissionItem.classList.add('transmission');
         carInfo.appendChild(transmissionItem);
 
         const priceBlock = document.createElement('div');
         priceBlock.classList.add('price-block');
 
-        // Создание цены
         const carPrice = document.createElement('span');
         carPrice.textContent = `${car.price}/сутки`;
         carPrice.classList.add('car-price');
@@ -169,16 +165,15 @@ function displayCars(filteredCars = cars) {
         priceButton.classList.add('price-button');
         priceButton.setAttribute('onclick', 'openModal()');
 
-        const formTopMessage = document.getElementById('feedbackForm-message')
+        const formTopMessage = document.getElementById('feedbackForm-message');
         priceButton.addEventListener('click', () => {
             if (!dateStart.value || !dateEnd.value) {
-                formTopMessage.innerHTML = `Уточните свободную дату у менеджера для бронирования <strong>${car.model}</strong> `;
+                formTopMessage.innerHTML = `Уточните свободную дату у менеджера для бронирования <strong>${car.model}</strong>`;
                 return;
             }
-            formTopMessage.innerHTML = `Бронирование автомобиля <strong>${car.model}</strong> с <strong>${dateStart.value}</strong> по <strong>${dateEnd.value}</strong> `;
-        })
+            formTopMessage.innerHTML = `Бронирование автомобиля <strong>${car.model}</strong> с <strong>${dateStart.value}</strong> по <strong>${dateEnd.value}</strong>`;
+        });
 
-        // Добавляем все элементы в карточку
         carDiv.appendChild(carModel);
         carDiv.appendChild(carClass);
         carDiv.appendChild(carImage);
@@ -191,13 +186,19 @@ function displayCars(filteredCars = cars) {
     });
 }
 
-// Функция для фильтрации по категориям
-function filterByClass(category) {
-    displayCars(category || '');
-}
 
-// Получаем все кнопки и обрабатываем их
+
 const categoryButtons = document.querySelectorAll('#sedans, #universals, #offroads, #all');
+
+// При загрузке страницы сразу активируем фильтр "Все"
+window.addEventListener('DOMContentLoaded', () => {
+    categoryButtons.forEach(button => button.classList.remove('active')); // Убираем 'active' у всех кнопок
+    const allButton = document.getElementById('all');
+    allButton.classList.add('active'); // Добавляем 'active' кнопке "Все"
+
+    // Вызываем фильтрацию для всех машин
+    filterByClass('');
+});
 
 categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -205,8 +206,7 @@ categoryButtons.forEach(button => {
         categoryButtons.forEach(btn => btn.classList.remove('active'));
 
         // Добавляем 'active' текущей кнопке
-        const parentDiv = button.tagName === 'DIV' ? button : null;
-        if (parentDiv) parentDiv.classList.add('active');
+        button.classList.add('active');
 
         // Передаем категорию в filterByClass
         const category = button.dataset.category || ''; // Используем data-атрибуты для категорий
@@ -214,6 +214,15 @@ categoryButtons.forEach(button => {
     });
 });
 
-displayCars();
+function filterByClass(category) {
+    // Фильтрация машин по категории
+    filteredCars = cars.filter(car => {
+        if (category) {
+            return car.carClass.toLowerCase() === category.toLowerCase();
+        }
+        return true; // Если категория не указана, показываем все машины
+    });
 
-
+    // Обновляем отображение
+    displayCars();
+}

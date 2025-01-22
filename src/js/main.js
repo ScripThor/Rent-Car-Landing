@@ -72,7 +72,10 @@ searchBtn.addEventListener('click', async () => {
 
     // Обновляем доступность машин
     updateCarAvailability();
-    displayCars(); // Передаем доступные машины для отображения
+
+    // Применяем фильтрацию доступных машин
+    filteredCars = getAvailableCars(); // Фильтруем доступные машины
+    displayCars(); // Обновляем отображение машин
     formBottomMessage.textContent = '';
     availableCars.innerHTML = `Доступные автомобили с <strong style="color:#3889c4">${dateStart.value}</strong> по <strong style="color:#3889c4">${dateEnd.value}</strong>. Найдено <strong>${getAvailableCars().length}</strong> доступных автомобиля(ей)`;
     smoothScrollTo(carsSection);
