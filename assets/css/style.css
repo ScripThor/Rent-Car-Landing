@@ -191,7 +191,7 @@ input, textarea {
   gap: 10px;
 }
 
-.form-input {
+.banner-form__input {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -201,23 +201,23 @@ input, textarea {
   border-radius: 8px;
   gap: 10px;
 }
-.form-input__icon img {
+.banner-form__icon img {
   width: 25px;
   vertical-align: middle;
 }
-.form-input__text {
+.banner-form__text {
   display: flex;
   flex-direction: column;
 }
-.form-input__label {
+.banner-form__label {
   font-size: 10px;
   color: grey;
   text-align: left;
 }
-.form-input__content {
+.banner-form__content {
   border: 0;
 }
-.form-input__content::after {
+.banner-form__content::after {
   border: 0;
 }
 
