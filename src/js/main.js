@@ -26,7 +26,13 @@ dateStart.addEventListener('input', updateDateEnd);
 dateEnd.addEventListener('input', updateDateEnd);
 
 function getAvailableCars() {
-    availableCars.textContent = `Доступные автомобили с ${dateStart.value} по ${dateEnd.value}`;
+    return cars.filter(car => car.available);
+}
+
+function updateCarAvailability() {
+    cars.forEach(car => {
+        car.available = Math.random() > 0.5; // С вероятностью 50% машина становится недоступной
+    });
 }
 
 // Анимация "Поиск..."
@@ -55,7 +61,6 @@ function smoothScrollTo(element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Обработка кнопки "Поиск"
 searchBtn.addEventListener('click', async () => {
     if (!dateStart.value || !dateEnd.value) {
         formBottomMessage.textContent = `Пожалуйста, укажите даты начала и окончания аренды`;
@@ -64,8 +69,12 @@ searchBtn.addEventListener('click', async () => {
 
     formBottomMessage.textContent = '';
     await showLoadingMessage();
-    getAvailableCars();
+
+    // Обновляем доступность машин
+    updateCarAvailability();
+    displayCars(); // Передаем доступные машины для отображения
     formBottomMessage.textContent = '';
+    availableCars.innerHTML = `Доступные автомобили с <strong style="color:#3889c4">${dateStart.value}</strong> по <strong style="color:#3889c4">${dateEnd.value}</strong>. Найдено <strong>${getAvailableCars().length}</strong> доступных автомобиля(ей)`;
     smoothScrollTo(carsSection);
 });
 

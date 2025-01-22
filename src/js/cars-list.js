@@ -7,6 +7,7 @@ const cars = [
         seats_number: 5,
         doors_number: 4,
         transmission: 'AT',
+        available: true
     },
     {
         model: 'Volkswagen Polo VI',
@@ -16,6 +17,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 2 730 руб',
+        available: true
     },
     {
         model: 'Geely Okavango',
@@ -25,6 +27,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 2 970 руб',
+        available: true
     },
     {
         model: 'Renault Duster',
@@ -34,6 +37,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 2 970 руб',
+        available: true
     },
     {
         model: 'Lada Largus 7 мест MT',
@@ -43,6 +47,7 @@ const cars = [
         doors_number: 4,
         transmission: 'МT',
         price: 'от 2 120 руб',
+        available: true
     },
     {
         model: 'Renault Kaptur',
@@ -52,6 +57,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 3 270 руб',
+        available: true
     },
     {
         model: 'Geely Emgrand',
@@ -61,6 +67,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 2 960 руб',
+        available: true
     },
     {
         model: 'Hyundai Sonata',
@@ -70,6 +77,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 3 970 руб',
+        available: true
     },
     {
         model: 'BMW 320D (G20)',
@@ -79,6 +87,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 4 160 руб',
+        available: true
     },
     {
         model: 'BMW 520D (G30)',
@@ -88,6 +97,7 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 6 600 руб',
+        available: true
     },
     {
         model: 'Mercedes-Benz GLE Coupe',
@@ -97,30 +107,27 @@ const cars = [
         doors_number: 4,
         transmission: 'AT',
         price: 'от 10 350 руб',
+        available: true
     },
 ];
 
-function displayCars(filteredClass = null) {
+function displayCars(filteredCars = cars) {
     const carList = document.getElementById('carList');
-
     carList.innerHTML = '';
 
-    cars.forEach(car => {
-        // Создание карточки для каждой машины
+    filteredCars.forEach(car => {
         const carDiv = document.createElement('div');
-        carDiv.classList.add('car-card')
+        carDiv.classList.add('car-card');
 
-        if (filteredClass && car.carClass !== filteredClass) {
-            carDiv.classList.add('disabled'); // Добавляем класс disabled
+        if (!car.available) {
+            carDiv.classList.add('disabled'); // Если машина недоступна, добавляем класс
         }
 
-        // Создание изображения
         const carImage = document.createElement('img');
         carImage.src = car.image;
         carImage.alt = car.model;
         carImage.classList.add('car-image');
 
-        // Создание заголовка модели машины
         const carModel = document.createElement('span');
         carModel.textContent = car.model;
         carModel.classList.add('car-name');
@@ -154,11 +161,11 @@ function displayCars(filteredClass = null) {
 
         // Создание цены
         const carPrice = document.createElement('span');
-        carPrice.textContent = `${car.price}/cутки`;
+        carPrice.textContent = `${car.price}/сутки`;
         carPrice.classList.add('car-price');
 
         const priceButton = document.createElement('button');
-        priceButton.textContent = `Забронировать`
+        priceButton.textContent = `Забронировать`;
         priceButton.classList.add('price-button');
         priceButton.setAttribute('onclick', 'openModal()');
 
@@ -180,10 +187,8 @@ function displayCars(filteredClass = null) {
         priceBlock.appendChild(priceButton);
         priceBlock.appendChild(carPrice);
 
-        // Добавляем карточку в контейнер
         carList.appendChild(carDiv);
-    })
-
+    });
 }
 
 // Функция для фильтрации по категориям
