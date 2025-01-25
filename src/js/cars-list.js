@@ -143,14 +143,17 @@ function displayCars() {
 
         const seatsItem = document.createElement('li');
         seatsItem.textContent = `${car.seats_number}`;
+        seatsItem.classList.add('seats_number');
         carInfo.appendChild(seatsItem);
 
         const doorsItem = document.createElement('li');
         doorsItem.textContent = `${car.doors_number}`;
+        doorsItem.classList.add('doors_number');
         carInfo.appendChild(doorsItem);
 
         const transmissionItem = document.createElement('li');
         transmissionItem.textContent = `${car.transmission}`;
+        transmissionItem.classList.add('transmission');
         carInfo.appendChild(transmissionItem);
 
         const priceBlock = document.createElement('div');
