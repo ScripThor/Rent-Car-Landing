@@ -200,7 +200,9 @@ input, textarea {
   border: 1px solid #bfbfbf;
   border-radius: 8px;
   gap: 10px;
+  cursor: pointer;
 }
+
 .banner-form__icon img {
   width: 25px;
   vertical-align: middle;
@@ -214,9 +216,11 @@ input, textarea {
   color: grey;
   text-align: left;
 }
+
 .banner-form__content {
   border: 0;
 }
+
 .banner-form__content::after {
   border: 0;
 }

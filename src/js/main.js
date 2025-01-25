@@ -38,6 +38,20 @@ function updateCarAvailability() {
     });
 }
 
+document.querySelectorAll('.banner-form__input').forEach(inputWrapper => {
+    inputWrapper.addEventListener('click', event => {
+        // Найти инпут внутри текущего блока
+        const dateInput = inputWrapper.querySelector('input[type="date"]');
+        if (dateInput) {
+            event.preventDefault(); // Предотвращаем поведение вложенных элементов
+            dateInput.showPicker(); // Открываем календарь
+        }
+    });
+});
+
+
+
+
 // Анимация "Поиск..."
 function showLoadingMessage() {
     let dots = 0;
