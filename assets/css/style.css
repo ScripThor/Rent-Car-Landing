@@ -387,13 +387,16 @@ input, textarea {
   align-items: center;
 }
 
-.choose__title {
-  line-height: 50px;
+.choose__title,
+.choose__content {
   width: 50%;
 }
 
+.choose__title {
+  line-height: 50px;
+}
+
 .choose__content {
-  width: 50%;
   line-height: 25px;
 }
 
@@ -401,11 +404,7 @@ input, textarea {
   font-size: 35px;
 }
 
-.choose__title span {
-  color: #3889c4;
-  font-weight: 600;
-}
-
+.choose__title span,
 .choose__content span {
   color: #3889c4;
   font-weight: 600;
