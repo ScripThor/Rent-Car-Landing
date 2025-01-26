@@ -541,40 +541,40 @@ input, textarea {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
-}
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+  }
 
-.modal.show {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease-in-out, visibility 0s 0s;
-}
+  .modal.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0s;
+  }
 
-.modal-content {
-  background-color: #fff;
-  margin: 100px auto;
-  padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-  font-size: 17px;
-  display: flex;
-  justify-content: space-between;
-}
+  .modal-content {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.modal-close {
-  font-size: 30px;
-  cursor: pointer;
-}
+  .modal-close {
+    font-size: 30px;
+    cursor: pointer;
+  }
 
 .feedbackForm-message {
   font-size: 15px;

@@ -1,10 +1,10 @@
 const modal = document.getElementsByClassName('modal')[0]
 
-const openModal = () => {
+window.openModal = function openModal() {
     modal.classList.add('show');
 };
 
-const closeModal = () => {
+window.closeModal = function closeModal() {
     modal.classList.remove('show');
 };
 
