@@ -1,3 +1,10 @@
+import '/components/header.js';
+import '/components/mainForm.js';
+import '/components/cars.js';
+import '/components/conditions.js';
+import '/components/choose.js';
+import '/components/faq.js';
+
 // Управление датами при заполнении
 const dateStart = document.getElementById('dateStart');
 const dateEnd = document.getElementById('dateEnd');
