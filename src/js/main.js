@@ -124,3 +124,44 @@ question.forEach(question => {
         }
     });
 });
+
+// Фильтры машин
+
+// При загрузке страницы сразу активируем фильтр "Все"
+window.addEventListener('DOMContentLoaded', () => {
+    categoryButtons.forEach(button => button.classList.remove('active')); // Убираем 'active' у всех кнопок
+    const allButton = document.getElementById('all');
+    allButton.classList.add('active'); // Добавляем 'active' кнопке "Все"
+
+    // Вызываем фильтрацию для всех машин
+    filterByClass('');
+});
+
+const categoryButtons = document.querySelectorAll('#sedans, #universals, #offroads, #all');
+
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Убираем 'active' у всех кнопок
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Добавляем 'active' текущей кнопке
+        button.classList.add('active');
+
+        // Передаем категорию в filterByClass
+        const category = button.dataset.category || ''; // Используем data-атрибуты для категорий
+        filterByClass(category);
+    });
+});
+
+function filterByClass(category) {
+    // Фильтрация машин по категории
+    filteredCars = cars.filter(car => {
+        if (category) {
+            return car.carClass.toLowerCase() === category.toLowerCase();
+        }
+        return true; // Если категория не указана, показываем все машины
+    });
+
+    // Обновляем отображение
+    displayCars();
+}
