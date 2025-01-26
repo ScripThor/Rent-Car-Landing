@@ -191,7 +191,7 @@ function displayCars() {
 
 
 
-const categoryButtons = document.querySelectorAll('#sedans, #universals, #offroads, #all');
+
 
 // При загрузке страницы сразу активируем фильтр "Все"
 window.addEventListener('DOMContentLoaded', () => {
@@ -202,6 +202,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // Вызываем фильтрацию для всех машин
     filterByClass('');
 });
+
+const categoryButtons = document.querySelectorAll('#sedans, #universals, #offroads, #all');
 
 categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
