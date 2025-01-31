@@ -63,9 +63,6 @@ class MainFormComponent extends HTMLElement {
           </div>
           <div class="banner-form__bottom"></div>
         </div>
-        <div class="banner-models">
-          <span>В нашем автопарке:</span>
-        </div>
       </div>
     `
   }
