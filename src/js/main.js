@@ -4,6 +4,7 @@ import '/components/cars.js';
 import '/components/conditions.js';
 import '/components/choose.js';
 import '/components/faq.js';
+import '/components/footer.js';
 
 // Управление датами при заполнении
 const dateStart = document.getElementById('dateStart');
