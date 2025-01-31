@@ -149,7 +149,9 @@ input, textarea {
 .header-contacts__callback {
   font-size: 11px;
   color: #ffffff;
+  cursor: pointer;
 }
+
 .banner {
   background-image: url(/assets/img/slide-1.jpg);
   height: 100%;

@@ -5,14 +5,14 @@ class HeaderComponent extends HTMLElement {
       <header class="header">
         <div class="header__container">
           <div class="header-social">
-            <a href="/public">
+            <a target="_blank" href="https://vk.com/" rel="nofollow noopener noreferrer">
               <img
                       class="header-social__icon"
                       src="/assets/img/social/vk.png"
                       alt="Мы в VK"
               />
             </a>
-            <a href="/public">
+            <a target="_blank" href="https://t.me/DreamCarStory" rel="nofollow noopener noreferrer">
               <img
                       class="header-social__icon"
                       src="/assets/img/social/tg.png"
@@ -51,7 +51,7 @@ class HeaderComponent extends HTMLElement {
             <a class="header-contacts__link" href="tel:79111111111"
             >+7 (911) 111-11-11</a
             >
-            <span class="header-contacts__callback"
+            <span class="header-contacts__callback" id="callback"
             >Заказать обратный звонок</span
             >
           </div>
