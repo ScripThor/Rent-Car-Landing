@@ -96,6 +96,7 @@ main {
     padding: 5px 0 15px;
     text-align: center;
     width: 100%;
+    height: auto;
 }
 
 .help-block__info {
