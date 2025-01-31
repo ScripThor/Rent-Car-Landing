@@ -197,6 +197,12 @@ input, textarea {
   gap: 10px;
 }
 
+.banner-form__bottom {
+  margin: 5px auto 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .banner-form__input {
   display: flex;
   flex-direction: row;
@@ -495,8 +501,12 @@ input, textarea {
   gap: 10px;
   margin-top: 13px;
 }
+.help-block__info a {
+  color: #fff;
+}
 .help-block__info img {
   width: 20px;
+  color: #fff;
 }
 .help-block__description {
   margin-bottom: 10px;
@@ -510,6 +520,7 @@ input, textarea {
 .help-block__tel a {
   font-size: 18px;
   font-weight: 500;
+  color: #fff;
 }
 .help-block__tel span {
   font-size: 12px;

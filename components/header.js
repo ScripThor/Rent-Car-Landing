@@ -40,7 +40,7 @@ class HeaderComponent extends HTMLElement {
             <div class="header-navigation__right">
               <nav class="header-navigation__menu">
                 <ul>
-                  <li><a href="#choose">Почему выбирают нас</a></li>
+                  <li><a href="#choose">Почему именно мы</a></li>
                   <li><a href="#faq">FAQ</a></li>
                 </ul>
               </nav>

@@ -51,12 +51,7 @@ class FaqComponent extends HTMLElement {
         <div class="help-block">
           <div class="help-block__title">По любым вопросам</div>
           <div class="help-block__info">
-            <img src="/assets/img/icons/location.webp" alt="" />
-            <a href="mailto:test@mail.ru">info@mail.ru</a>
-          </div>
-          <div class="help-block__info">
-            <img src="/assets/img/icons/location.webp" alt="" />
-            <a href="/public">Задать вопрос консультанту</a>
+            <a href="mailto:info@mail.ru">info@mail.ru</a>
           </div>
         </div>
         <div class="help-block">
@@ -76,6 +71,10 @@ class FaqComponent extends HTMLElement {
       </div>
     </section>
     `
+    const callbackButton = this.querySelector('#callback')
+    callbackButton.addEventListener('click', () => {
+      openModal()
+    })
   }
 }
 

@@ -1,0 +1,118 @@
+main {
+    padding: 0 10px;
+}
+
+.header-navigation {
+    display: none;
+}
+
+.banner-header {
+    padding: 10px;
+}
+
+.banner-form input,
+.banner-form textarea {
+    padding: 0px;
+    margin-top: 0px;
+    border: 0;
+    resize: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.banner-form label {
+    margin-top: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.banner-form {
+    padding: 20px 30px;
+    display: block;
+    height: auto;
+    width: 260px;
+}
+
+.banner-form__input {
+    padding: 10px 10px;
+    justify-content: space-evenly;
+}
+
+.banner-form__top {
+    flex-direction: column;
+}
+
+.banner-form__icon img {
+    width: 30px;
+}
+
+.banner-form__text {
+    margin: 0 auto;
+}
+
+.banner-form__bottom {
+    margin: 10px auto 0;
+}
+
+.cars-category {
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    justify-content: flex-start;
+}
+
+.conditions-list {
+    gap: 15px;
+}
+
+.conditions-list__item {
+    width: 100%;
+}
+
+.choose__title, .choose__content {
+    width: 100%;
+}
+
+.choose__block {
+    flex-direction: column;
+}
+
+.faq {
+    flex-direction: column;
+}
+
+.faq-info {
+    width: 100%;
+}
+
+.faq-help {
+    padding: 5px 0 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.help-block__info {
+    justify-content: center;
+}
+
+.footer-container {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contacts {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-social {
+    width: 100%;
+    text-align: center;
+}
+
