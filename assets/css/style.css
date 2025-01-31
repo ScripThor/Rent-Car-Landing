@@ -57,9 +57,8 @@ label {
   margin-top: 10px;
 }
 
-input, textarea {
-  padding: 5px;
-  margin-top: 5px;
+input, textarea, select {
+  padding: 5px 0;
   border: 1px solid #ccc;
   resize: none;
   border-radius: 5px;
@@ -224,7 +223,8 @@ input, textarea {
   flex-direction: column;
 }
 .banner-form__label {
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 400;
   color: grey;
   text-align: left;
 }
