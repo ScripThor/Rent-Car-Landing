@@ -1,7 +1,6 @@
-
 class HeaderComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
       <header class="header">
         <div class="header__container">
           <div class="header-social">
@@ -57,13 +56,13 @@ class HeaderComponent extends HTMLElement {
           </div>
         </div>
       </header>
-    `;
+    `
 
-        const callbackButton = this.querySelector('#callback');
-        callbackButton.addEventListener('click', () => {
-            openModal();
-        });
-    }
+    const callbackButton = this.querySelector('#callback')
+    callbackButton.addEventListener('click', () => {
+      openModal()
+    })
+  }
 }
 
-customElements.define('header-component', HeaderComponent);
+customElements.define('header-component', HeaderComponent)

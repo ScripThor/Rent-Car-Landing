@@ -1,8 +1,7 @@
-
 class ChooseComponent extends HTMLElement {
-connectedCallback() {
+  connectedCallback() {
     this.innerHTML = `
-<section class="choose ct-container" id="choose">
+<section class="choose ct-container" id="choose"> 
     <div class="choose__block">
         <div class="choose__title">
             <h2>Почему <br><span>выбирают нас</span></h2>
@@ -16,8 +15,8 @@ connectedCallback() {
     </div>
     <img class='choose__img' src="/assets/img/whyus.png" alt="">
 </section>
-    `;
-}
+    `
+  }
 }
 
-customElements.define('choose-component', ChooseComponent);
+customElements.define('choose-component', ChooseComponent)

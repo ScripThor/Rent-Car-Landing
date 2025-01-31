@@ -1,7 +1,6 @@
-
 class ModalWindow extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <div class="modal">
           <div class="modal-content">
             <form id="feedbackForm">
@@ -18,8 +17,8 @@ class ModalWindow extends HTMLElement {
           </div>
         </div>
         <div id="feedbackInfo" class="feedback-info hidden"></div>
-    `;
-    }
+    `
+  }
 }
 
-customElements.define('modal-window', ModalWindow);
+customElements.define('modal-window', ModalWindow)

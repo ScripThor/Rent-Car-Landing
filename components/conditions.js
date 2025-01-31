@@ -1,7 +1,7 @@
 class ConditionsComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-<section class="conditions ct-container" id="conditions">
+  connectedCallback() {
+    this.innerHTML = `
+<section class="conditions ct-container" id="conditions"> 
     <h2 class="title">Условия аренды</h2>
     <p class="description">Арендуя автомобиль в «N-прокат», Вы должны следовать правилам компании:</p>
     <div class="conditions-list">
@@ -43,8 +43,8 @@ class ConditionsComponent extends HTMLElement {
         </div>
     </div>
 </section>
-    `;
-    }
+    `
+  }
 }
 
-customElements.define('conditions-component', ConditionsComponent);
+customElements.define('conditions-component', ConditionsComponent)

@@ -1,6 +1,6 @@
 class CarsComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
     <section>
       <h2 class="title" id="ourCars">Наши автомобили</h2>
       <div class="cars">
@@ -47,7 +47,7 @@ class CarsComponent extends HTMLElement {
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"
-                    fill="none"
+                    fill="none" 
                     viewBox="0 0 24 14"
                     font-size="36"
             >
@@ -62,8 +62,8 @@ class CarsComponent extends HTMLElement {
         <div id="carList" class="car-list"></div>
       </div>
     </section>
-    `;
-    }
+    `
+  }
 }
 
-customElements.define('cars-component', CarsComponent);
+customElements.define('cars-component', CarsComponent)

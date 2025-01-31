@@ -1,6 +1,6 @@
 class MainFormComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
       <div class="banner-info" id="banner">
         <div class="banner-header">
           <h1 class="banner-header__title">
@@ -67,8 +67,8 @@ class MainFormComponent extends HTMLElement {
           <span>В нашем автопарке:</span>
         </div>
       </div>
-    `;
-    }
+    `
+  }
 }
 
-customElements.define('main-form-component', MainFormComponent);
+customElements.define('main-form-component', MainFormComponent)

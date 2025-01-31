@@ -1,7 +1,6 @@
-
 class FooterComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
       <footer class="footer">
         <div class="footer-container">
             <div class="footer-contacts">
@@ -62,8 +61,8 @@ class FooterComponent extends HTMLElement {
             </div>
         </div>
       </footer>
-    `;
-    }
+    `
+  }
 }
 
-customElements.define('footer-component', FooterComponent);
+customElements.define('footer-component', FooterComponent)
