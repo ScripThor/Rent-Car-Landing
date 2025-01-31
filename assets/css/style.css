@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Montserrat, serif;
@@ -610,3 +614,87 @@ input, textarea {
   opacity: 0;
 }
 
+.footer {
+  background: #f5f6fa;
+  padding: 50px 0;
+}
+
+.footer-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contacts {
+  width: 25%;
+}
+
+.footer-contacts__tel {
+  color: #3889c4;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-contacts__tel:hover {
+  color: #2477b1;
+}
+
+.footer-contacts__time {
+  color: #c8c7c7;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px 0 15px;
+}
+
+.footer-contacts__vk {
+  padding: 5px 10px;
+  background-color: #5181b8;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  width: 160px;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contacts__vk:hover {
+  background-color: #366aa8;
+}
+
+.footer-social {
+  width: 25%;
+  text-align: right;
+}
+
+.footer-social__link {
+  color: #fff;
+  background: #3889c4;
+  padding: 10px 10px;
+  border-radius: 50%;
+}
+
+.footer-social__link span {
+  display: flex;
+}
+
+.footer-social__item {
+  margin-right: 10px;
+}
+
+.footer-links {
+  width: 85%;
+  text-align: center;
+}
+
+.footer-links__item {
+  margin-right: 10px;
+}
+
+.footer-links__item a {
+  color: grey;
+}
+
+.footer-links__item a:hover {
+  color: #bebebe;
+}
