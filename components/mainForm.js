@@ -1,7 +1,7 @@
 class MainFormComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-      <div class="banner-info">
+      <div class="banner-info" id="banner">
         <div class="banner-header">
           <h1 class="banner-header__title">
             Аренда автомобилей по лучшей цене

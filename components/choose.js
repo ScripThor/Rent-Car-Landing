@@ -2,7 +2,7 @@
 class ChooseComponent extends HTMLElement {
 connectedCallback() {
     this.innerHTML = `
-<section class="choose ct-container">
+<section class="choose ct-container" id="choose">
     <div class="choose__block">
         <div class="choose__title">
             <h2>Почему <br><span>выбирают нас</span></h2>

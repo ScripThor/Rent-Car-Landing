@@ -2,7 +2,7 @@ class CarsComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
     <section>
-      <h2 class="title">Наши автомобили</h2>
+      <h2 class="title" id="ourCars">Наши автомобили</h2>
       <div class="cars">
         <div class="description" id="availableCars">Пожалуйста, выберите даты начала и завершения аренды, чтобы увидеть доступные автомобили</div>
         <div class="cars-category">

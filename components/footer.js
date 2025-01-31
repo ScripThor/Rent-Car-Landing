@@ -16,11 +16,11 @@ class FooterComponent extends HTMLElement {
             </div>
             <div class="footer-links">
                 <ul class="footer-links__list">
-                    <li class="footer-links__item"><a href="/">Выбрать даты</a></li>
-                    <li class="footer-links__item"><a href="/">Наши машины</a></li>
-                    <li class="footer-links__item"><a href="/">Условия аренды</a></li>
-                    <li class="footer-links__item"><a href="/">Почему выбирают нас</a></li>
-                    <li class="footer-links__item"><a href="/">FAQ</a></li>
+                    <li class="footer-links__item"><a href="#banner">Выбрать даты</a></li>
+                    <li class="footer-links__item"><a href="#ourCars">Наши машины</a></li>
+                    <li class="footer-links__item"><a href="#conditions">Условия аренды</a></li>
+                    <li class="footer-links__item"><a href="#choose">Почему выбирают нас</a></li>
+                    <li class="footer-links__item"><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-social">

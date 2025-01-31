@@ -2,7 +2,7 @@
 class FaqComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-    <section class="faq ct-container">
+    <section class="faq ct-container" id="faq">
       <div class="faq-info">
         <h2>Часто задаваемые вопросы</h2>
         <div class="faq-blocks">
