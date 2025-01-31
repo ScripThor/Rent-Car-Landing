@@ -5,6 +5,7 @@ import '/components/conditions.js';
 import '/components/choose.js';
 import '/components/faq.js';
 import '/components/footer.js';
+import '/components/modal.js';
 
 // Управление датами при заполнении
 const dateStart = document.getElementById('dateStart');
@@ -56,9 +57,6 @@ document.querySelectorAll('.banner-form__input').forEach(inputWrapper => {
         }
     });
 });
-
-
-
 
 // Анимация "Поиск..."
 function showLoadingMessage() {
