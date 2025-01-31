@@ -58,6 +58,11 @@ class HeaderComponent extends HTMLElement {
         </div>
       </header>
     `;
+
+        const callbackButton = this.querySelector('#callback');
+        callbackButton.addEventListener('click', () => {
+            openModal();
+        });
     }
 }
 
