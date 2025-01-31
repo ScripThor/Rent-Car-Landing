@@ -24,9 +24,8 @@ class HeaderComponent extends HTMLElement {
             <div class="header-navigation__left">
               <nav class="header-navigation__menu">
                 <ul>
-                  <li><a href="#">Главная</a></li>
-                  <li><a href="#">О нас</a></li>
-                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#ourCars">Наши автомобили</a></li>
+                  <li><a href="#conditions">Условия аренды</a></li>
                 </ul>
               </nav>
             </div>
@@ -42,9 +41,8 @@ class HeaderComponent extends HTMLElement {
             <div class="header-navigation__right">
               <nav class="header-navigation__menu">
                 <ul>
-                  <li><a href="#">Главная</a></li>
-                  <li><a href="#">О нас</a></li>
-                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#choose">Почему выбирают нас</a></li>
+                  <li><a href="#faq">FAQ</a></li>
                 </ul>
               </nav>
             </div>
